@@ -50,16 +50,19 @@ header {
 }
 
 /* Search Bar */
-.searchBar{
+.searchBar {
     height: 40px;
-    width:640px;
+    width: 640px;
     display: flex;
     justify-content: space-evenly;
+    border: 2px solid transparent;  /* Prevents shifting */
+    border-radius: 4px;              /* Matches searchIcon and select box */
+    overflow: hidden;                /* Prevents content overflow when hovering */
 }
 
-/* .searchBar:hover{
-    border:1px solid orange;
-} */
+.searchBar:hover {
+    border-color: yellow;  /* Only changes the color */
+}
 
 .all{
     background-color: #e6e6e6;
@@ -197,4 +200,228 @@ header {
 
 .cartTwo i{
     font-size: 25px;
+}
+
+/* Panel */
+.panel {
+    height: 39px;
+    width: 100%;
+    background-color: #232f3e;
+    display: flex;
+    justify-content:space-evenly;
+    color:white;
+    align-items: center;
+}
+
+.panelAll {
+    margin: 0 10px;              /* Space between items */
+    padding: 8px 10px;           /* Adjusts padding for better spacing */
+    height: 39px;                /* Matches the panel height */
+    line-height: 23px;           /* Centers text vertically */
+    border: 1.5px solid transparent;  /* Default transparent border */
+    border-radius: 4px;               /* Optional: for smoother edges */
+    cursor: pointer;
+}
+
+.panelDetails {
+    width: 70%;
+}
+
+.panelDetails p {
+    display: inline-block;       /* Allows width to fit the text */
+    margin: 0 10px;              /* Space between items */
+    padding: 8px 10px;           /* Adjusts padding for better spacing */
+    font-size: 14px;
+    height: 39px;                /* Matches the panel height */
+    line-height: 23px;           /* Centers text vertically */
+    border: 1.5px solid transparent;  /* Default transparent border */
+    border-radius: 4px;               /* Optional: for smoother edges */
+    cursor: pointer;
+}
+
+.panelDetails p:hover{
+    color: #cccccc;
+}
+
+.panelDeals {
+    font-weight: 600;
+    margin: 0 10px;              /* Space between items */
+    padding: 8px 10px;           /* Adjusts padding for better spacing */
+    height: 39px;                /* Matches the panel height */
+    line-height: 23px;           /* Centers text vertically */
+    border: 1.5px solid transparent;  /* Default transparent border */
+    border-radius: 4px;               /* Optional: for smoother edges */
+    cursor: pointer;
+}
+
+/* Hero Section */
+.heroSection {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroSection img {
+    width: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.heroSection div {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96%;
+    background-color: #f5f6f6;
+    color: #0f1111;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.heroSection a {
+    color: #007185;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.heroSection a:hover {
+    text-decoration: underline;
+}
+
+/* Products Section */
+.products {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    background-color: #ededed;
+    padding: 20px 10px 0 0px;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.products .box1 {
+    width: 290px;
+    height: 420px;
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 3px;
+}
+
+.box1 img {
+    height: 303px;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 17px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.box1 p {
+    color: black;
+    font-weight: 700;
+    font-size: 19px;
+    text-align: start;
+    margin: 17px 0 17px 17px;
+}
+
+.box1 a {
+    color: #2162a1;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 25px 0 17px 17px;   
+}
+
+.box1 a:hover {
+    color: #05325f;
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+}
+
+/* footer 1 */
+.firstFooter {
+    background-color: #37475a;
+    height: 49px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+/* footer 2 */
+.secondFooter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6%;
+    padding-top: 30px;
+    background-color: #232f3e;
+}
+
+.secondFooter .columns {
+    height: 291px;
+    width: 221px;
+}
+
+.columns a {
+    text-decoration: none;
+    color: rgb(201, 201, 201);
+    line-height: 25px; 
+    font-size: 14px;  
+}
+
+.columns p {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.columns a:hover {
+    text-decoration: underline;
+}
+
+/* footer 3 */
+.footerThree {
+    width: 100%;
+    background-color: #131a22;
+    height: 77px;
+    color: rgb(201, 201, 201);
+}
+
+.footerThree .three1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.three1 a {
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.three1 a:hover {
+    text-decoration: underline;
+}
+
+.footerThree .three2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 6px;
+    font-size: 12px;
 }
